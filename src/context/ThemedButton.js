@@ -7,12 +7,13 @@ class ThemedButton extends React.Component {
         return (
             <ThemeContext.Consumer>
                 {
-                    theme => (
+                    ({theme, updateTheme}) => (
                         <GreetingContext.Consumer>
                             {
                                 greeting => (
                                     <>
                                         <div>Inside Themed Button</div>
+                                        <button onClick={updateTheme}>Toggle theme</button>
                                         <p>{`${theme} themed button displaying
                                          ${greeting}`}</p>
                                     </>
