@@ -1,6 +1,9 @@
+import Dashboard from "./context/Dashboard";
+
 function App() {
   return (
     <div className="App">
+      <Dashboard></Dashboard>
     </div>
   );
 }
