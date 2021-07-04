@@ -1,6 +1,7 @@
 import Dashboard from "./context/Dashboard";
 import Home from "./error-boundaries/Home";
 import Menu from "./forwarding-refs/Menu";
+import Navbar from "./higher-order-components/Navbar";
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
 
       {/* Usage of Forward Refs */}
       <Menu></Menu>
+
+      {/* Usage of Higher Order Components */}
+      <Navbar></Navbar>
     </div>
   );
 }
