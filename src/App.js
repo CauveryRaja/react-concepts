@@ -2,6 +2,7 @@ import Dashboard from "./context/Dashboard";
 import Home from "./error-boundaries/Home";
 import Menu from "./forwarding-refs/Menu";
 import Navbar from "./higher-order-components/Navbar";
+import Modal from './portals/Modal';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
 
       {/* Usage of Higher Order Components */}
       <Navbar></Navbar>
+
+      {/* Usage of Portals */}
+      <Modal></Modal>
     </div>
   );
 }
