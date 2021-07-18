@@ -3,6 +3,8 @@ import Home from "./error-boundaries/Home";
 import Menu from "./forwarding-refs/Menu";
 import Navbar from "./higher-order-components/Navbar";
 import Modal from './portals/Modal';
+import List from './lists_keys/List';
+import ProfilerWrapper from "./profiler/ProfilerWrapper";
 
 function App() {
   return (
@@ -21,6 +23,12 @@ function App() {
 
       {/* Usage of Portals */}
       <Modal></Modal>
+
+      {/* Practising List & Keys */}
+      {/* <List></List> */}
+
+      {/* Usage of Profiler API */}
+      <ProfilerWrapper></ProfilerWrapper>
     </div>
   );
 }
