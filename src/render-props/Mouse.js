@@ -1,5 +1,4 @@
 import React from 'react';
-import Cat from './Cat';
 
 class Mouse extends React.Component {
     constructor() {
@@ -22,7 +21,7 @@ class Mouse extends React.Component {
         return <>
             <div style={{width: '500px', height: '500px', border: '1px solid black'}}
             onMouseMove={this.mouseMove}>
-                <Cat x={this.state.x} y={this.state.y}></Cat>
+                {this.props.render(this.state)}
             </div>
             <p>{`x: ${this.state.x}, y: ${this.state.y}`}</p>
         </>

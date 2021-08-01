@@ -6,6 +6,8 @@ import Modal from './portals/Modal';
 import List from './lists_keys/List';
 import ProfilerWrapper from "./profiler/ProfilerWrapper";
 import Mouse from './render-props/Mouse';
+import Cat from './render-props/Cat';
+import Dog from './render-props/Dog';
 
 function App() {
   return (
@@ -32,7 +34,8 @@ function App() {
       <ProfilerWrapper></ProfilerWrapper>
 
       {/* Usage of Render Props */}
-      <Mouse></Mouse>
+      <Mouse render={mouse => <Cat {...mouse}></Cat>}></Mouse>
+      <Mouse render={mouse => <Dog {...mouse}></Dog>}></Mouse>
     </div>
   );
 }
