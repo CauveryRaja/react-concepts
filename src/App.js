@@ -5,6 +5,7 @@ import Navbar from "./higher-order-components/Navbar";
 import Modal from './portals/Modal';
 import List from './lists_keys/List';
 import ProfilerWrapper from "./profiler/ProfilerWrapper";
+import Mouse from './render-props/Mouse';
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
 
       {/* Usage of Profiler API */}
       <ProfilerWrapper></ProfilerWrapper>
+
+      {/* Usage of Render Props */}
+      <Mouse></Mouse>
     </div>
   );
 }
