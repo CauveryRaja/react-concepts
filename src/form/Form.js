@@ -3,13 +3,20 @@ import React from 'react';
 class Form extends React.Component {
     constructor() {
         super();
-        // this.state = 'hello';
-        this.state = ['hello'];
+        this.state = {
+            name: '',
+            age: 0
+        };
+        this.changeValue = this.changeValue.bind(this);
+    }
+
+    changeValue(event) {
+        this.setState({
+            [event.target.name]: event.target.value
+        });
     }
 
     btnClick(event) {
-        // this.setState('hai');
-        this.setState(['hai']);
         event.preventDefault();
     }
     
@@ -17,13 +24,13 @@ class Form extends React.Component {
         return <form>
             <div>
                 <label htmlFor="name">Name</label>
-                <input type="text" name="name"/>
+                <input type="text" name="name" value={this.state.name} onChange={this.changeValue}/>
             </div>
             <div>
                 <label htmlFor="age">Age</label>
-                <input type="text" name="age"/>
+                <input type="number" name="age" value={this.state.age} onChange={this.changeValue}/>
             </div>
-            <button onClick={this.btnClick}>Set state</button>
+            <button onClick={this.submitForm}>Submit</button>
         </form>
     }
 }
