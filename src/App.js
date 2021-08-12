@@ -8,6 +8,7 @@ import ProfilerWrapper from "./profiler/ProfilerWrapper";
 import Mouse from './render-props/Mouse';
 import Cat from './render-props/Cat';
 import Dog from './render-props/Dog';
+import Form from './form/Form';
 
 function App() {
   return (
@@ -36,6 +37,9 @@ function App() {
       {/* Usage of Render Props */}
       <Mouse render={mouse => <Cat {...mouse}></Cat>}></Mouse>
       <Mouse render={mouse => <Dog {...mouse}></Dog>}></Mouse>
+
+      {/* Usage of Form */}
+      <Form></Form>
     </div>
   );
 }
