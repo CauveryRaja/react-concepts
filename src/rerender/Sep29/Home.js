@@ -9,6 +9,7 @@ function Header() {
     console.log('Rendering Header...');
     return <p>Static header</p>;
 }
+Header = React.memo(Header);
 
 function Home () {
     let [count, setCount] = useState(0);
