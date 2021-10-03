@@ -13,6 +13,8 @@ function Message ({ name, greeting}) {
         // }
     });
 
+    useEffect(() => console.log('updated count...', count), [count]);
+
     return (
         <>
             <div>{greeting}, {name} - Welcome to Hooks !</div>
