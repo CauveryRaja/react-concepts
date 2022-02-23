@@ -27,6 +27,7 @@ const Home = () => {
 
     return <>
         <button onClick={clickListener}>Step up</button>
+        <p>Count: {count}</p>
     </>
 };
 
